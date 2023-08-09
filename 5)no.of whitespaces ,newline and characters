@@ -1,0 +1,33 @@
+#include<stdio.h>
+int main()
+{
+	char str[100];
+	int i;
+	int words=0,newline=0,characters=0;
+	printf("enter line of text:");
+	scanf("%[^~]s",str);
+	for(i=0;str[i]!='\0';i++)
+	{
+		if(str[i]==' ')
+		 words++;
+		else if(str[i]=='\n')
+		{
+		  words++;
+		 newline++;
+        }
+		else if(str[i]!=' ')
+		{
+			characters++;
+		}
+	}
+		if(characters>0)
+		{
+			words++;
+			newline++;
+		}
+		printf("total number of words:%d\n",words);
+		printf("total number of newline:%d\n",newline);
+		printf("total number of characters:%d\n",characters);
+	
+	return 0;
+}
