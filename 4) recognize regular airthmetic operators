@@ -1,0 +1,55 @@
+#include<stdio.h>
+int main()
+{
+	char input[5];
+	printf("enter an operator:");
+	scanf("%s",input);
+	switch (input[0])
+	{
+		case '>':
+			if(input[1]=='=')
+			printf("greater than equal");
+			else
+			printf("greater than");
+			break;
+		case '<':
+			if(input[1]=='=')
+			printf("less than equal");
+			else
+			printf("less than");
+			break;
+		case '!':
+			if(input[1]=='=')
+			printf("not equal");
+			else
+			printf("Bitwise NOT");
+			break;
+		case '&':
+			if(input[1]=='&')
+			printf("logical AND");
+			else
+			printf("Bitwise AND");
+			break;
+		case '|':
+			if(input[1]=='|')
+			printf("logical OR");
+			else
+			printf("Bitwise OR");
+			break;
+		case '+':
+			printf("Addition");
+			break;
+		case '-':
+			printf("subtraction");
+			break;
+		case '*':
+			printf("multiplication");
+			break;
+		case '/':
+			printf("division");
+			break;
+		default:
+			printf("not an ooperator");
+	}
+	return 0;
+}
